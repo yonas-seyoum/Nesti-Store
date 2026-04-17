@@ -1,3 +1,5 @@
+import { Currency } from "lucide-react";
+
 export type Product = {
   id: number;
   name: string;
@@ -6,14 +8,16 @@ export type Product = {
   imageURL: string;
   colors: string[];
   brand: string;
-//   detial: BagDetail;
+  //   detial: BagDetail;
 };
 
 export type BagDetail = {
-    id: number;
-}
+  id: number;
+};
 
 export type Order = {
-    id: number;
-    productId: number;
-}
+  id: number;
+  productId: number;
+};
+
+export type Currency = "ETB" | "THB";
