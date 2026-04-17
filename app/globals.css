@@ -6,14 +6,13 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
 
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
 
-  --primary: oklch(0.205 0 0);
+  --primary: oklch(0.45 0.1 150);
   --primary-foreground: oklch(0.985 0 0);
 
   --secondary: oklch(0.97 0 0);
@@ -71,8 +70,8 @@
   --primary: oklch(0.922 0 0);
   --primary-foreground: oklch(0.205 0 0);
 
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0.03 85);
+  --secondary-foreground: oklch(0.2 0 0);
 
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
@@ -108,12 +107,12 @@
 }
 
 * {
-  border-color: hsl(var(--border));
+  border-color: var(--border);
 }
 
 body {
-  background: hsl(var(--background));
-  color: hsl(var(--foreground));
+  background: var(--background);
+  color: var(--foreground);
   font-family: "DM Sans", sans-serif;
 }
 
@@ -127,7 +126,6 @@ h6 {
 }
 
 @theme inline {
-
   --font-heading: var(--font-sans);
 
   --font-sans: var(--font-sans);
@@ -191,6 +189,14 @@ h6 {
   --color-card: var(--card);
 
   --color-foreground: var(--foreground);
+
+  --color-thai: hsl(var(--thai));
+
+  --color-thai-foreground: hsl(var(--thai-foreground));
+
+  --color-ethiopian: hsl(var(--ethiopian));
+
+  --color-ethiopian-foreground: hsl(var(--ethiopian-foreground));
 
   --color-background: var(--background);
 
