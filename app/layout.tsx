@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navigation from "@/components/navigation";
+import CurrencyContextProvider from "./context/CurrencyContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +29,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <CurrencyContextProvider>
+          <div className="flex flex-col h-screen">
+            <Navigation />
+            <main className="flex-1 pb-14 md:pb-0 ">{children}</main>
+          </div>
+        </CurrencyContextProvider>
       </body>
     </html>
   );
